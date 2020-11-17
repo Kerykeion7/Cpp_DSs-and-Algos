@@ -11,13 +11,14 @@ private:
     HashTableNode<K, V>* nodes;
 
     void Resize();
-    int Hash(K key);
     int Probe(int factor);
 
 public:
     HashTable();
+    int Hash(K key);
     void Add(K key, V value);
     void Remove(K key);
+    HashTableNode<K, V> GetAt(int index);
     bool Exists(K key);
     V Get(K key);
 };
