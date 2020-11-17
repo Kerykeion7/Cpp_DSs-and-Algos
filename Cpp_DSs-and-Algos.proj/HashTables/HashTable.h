@@ -10,14 +10,14 @@ private:
     int resizeTreshold = (int)(_capacity * (2.0F / 3.0F));
     HashTableNode<K, V>* nodes;
 
-    void resize();
-    int hash(K key);
-    int probe(int factor);
+    void Resize();
+    int Hash(K key);
+    int Probe(int factor);
 
 public:
-    HashTable() {};
-    void add(K key, V value);
-    void remove(K key);
-    bool exists(K key);
-    V get(K key);
+    HashTable();
+    void Add(K key, V value);
+    void Remove(K key);
+    bool Exists(K key);
+    V Get(K key);
 };

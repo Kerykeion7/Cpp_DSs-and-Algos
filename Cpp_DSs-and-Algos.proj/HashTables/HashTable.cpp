@@ -1,37 +1,42 @@
 #include "HashTable.h"
 
 template<class K, class V>
-void HashTable<K, V>::resize() {
+void HashTable<K, V>::Resize() {
 
 }
 
 template<class K, class V>
-int HashTable<K, V>::hash(K key) {
+int HashTable<K, V>::Hash(K key) {
 
 }
 
 template<class K, class V>
-int HashTable<K, V>::probe(int factor) {
+int HashTable<K, V>::Probe(int factor) {
 
 }
 
 template<class K, class V>
-void HashTable<K, V>::add(K key, V value) {
+void HashTable<K, V>::Add(K key, V value) {
 
 }
 
 template<class K, class V>
-void HashTable<K, V>::remove(K key) {
+void HashTable<K, V>::Remove(K key) {
 
 }
 
 template<class K, class V>
-bool HashTable<K, V>::exists(K key) {
+bool HashTable<K, V>::Exists(K key) {
 
 }
 
 template<class K, class V>
-V HashTable<K, V>::get(K key) {
+V HashTable<K, V>::Get(K key) {
+
+}
+
+template<class K, class V>
+HashTable<K, V>::HashTable() {
 
 }
 
