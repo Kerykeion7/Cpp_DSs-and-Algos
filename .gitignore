@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Cpp_DSs-and-Algos/v16
+/Cpp_DSs-and-Algos.proj/Debug
+/Cpp_DSs-and-Algos.Test/Debug
+/Debug
+/Cpp_DSs-and-Algos.proj/Cpp_DSs-and-Algos.proj.vcxproj
+/Cpp_DSs-and-Algos.proj/Cpp_DSs-and-Algos.proj.vcxproj.filters
+/Cpp_DSs-and-Algos.proj/Cpp_DSs-and-Algos.proj.vcxproj.user
