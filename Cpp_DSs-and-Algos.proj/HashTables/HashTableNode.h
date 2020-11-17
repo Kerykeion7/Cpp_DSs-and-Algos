@@ -5,7 +5,9 @@ public:
     K Key;
     V Value;
 
-    HashTableNode<K, V>(K key, V value) {
+    HashTableNode() {};
+
+    HashTableNode(K key, V value) {
         Key = key;
         Value = value;
     }

@@ -37,7 +37,7 @@ V HashTable<K, V>::Get(K key) {
 
 template<class K, class V>
 HashTable<K, V>::HashTable() {
-
+	nodes = new HashTableNode<K, V>[_capacity];
 }
 
 int main() { return 0; }
