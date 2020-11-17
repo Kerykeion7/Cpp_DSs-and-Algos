@@ -5,13 +5,13 @@
 using namespace std;
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace CppDSsandAlgosTest
+namespace HashTableTest
 {
-	TEST_CLASS(CppDSsandAlgosTest)
+	TEST_CLASS(HashTableTest)
 	{
 	public:
 
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestHashTableIsNotNull)
 		{
 			HashTable<int, string>* table = new HashTable<int, string>();
 			Assert::IsNotNull(table);
