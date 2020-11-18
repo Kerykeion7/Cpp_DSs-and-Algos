@@ -14,11 +14,16 @@ private:
     int Probe(int factor);
 
 public:
+    ~HashTable();
+
     HashTable();
     int Hash(K key);
+    int GetSize();
+    int GetCapacity();
     void Add(K key, V value);
     void Remove(K key);
     HashTableNode<K, V> GetAt(int index);
+    HashTableNode<K, V>* Get(K key);
     bool Exists(K key);
-    V Get(K key);
+    V GetValue(K key);
 };

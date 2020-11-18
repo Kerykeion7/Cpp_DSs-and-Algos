@@ -6,7 +6,7 @@ public:
     V Value;
     bool isAssigned = false;
 
-    HashTableNode() {}
+    HashTableNode() {};
 
     HashTableNode(K key, V value) {
         Key = key;
