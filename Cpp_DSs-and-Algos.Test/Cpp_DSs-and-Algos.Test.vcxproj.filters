@@ -24,7 +24,7 @@
     <ClCompile Include="Arrays\DynamicArrayTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Queues\FixedArrayQueues\ArrayQueueTest.cpp">
+    <ClCompile Include="Queues\LinkedListQueues\LinkedListQueueTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClInclude Include="Arrays\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Queues\FixedArrayQueues\pch.h">
+    <ClInclude Include="Queues\LinkedListQueues\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
