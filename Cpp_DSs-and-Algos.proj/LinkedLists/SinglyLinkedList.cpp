@@ -34,15 +34,6 @@ bool RemoveConstantTimeIfIndexAllows(SinglyLinkedList<T>* lst, int index) {
 }
 
 template<class T>
-T GetConstantTimeIfIndexAllows(SinglyLinkedList<T>* lst, int index) {
-    if (index < 0 || index > lst->Length() - 1) throw std::invalid_argument("Given index is not within the bounds of the linked list.");
-    if (index == 0) return lst->GetFront();
-    if (index == lst->Length() - 1) return lst->GetBack();
-
-    return 0;
-}
-
-template<class T>
 T GetLinearTime(SinglyLinkedList<T>* lst, int forLoopCount) {
     SinglyLinkedNode<T>* current = lst->Head;
     for (int i = 0; i < forLoopCount; i++)
@@ -50,6 +41,15 @@ T GetLinearTime(SinglyLinkedList<T>* lst, int forLoopCount) {
         current = current->Next;
     }
     return current->value;
+}
+
+template<class T>
+T GetConstantTimeIfIndexAllows(SinglyLinkedList<T>* lst, int index) {
+    if (index < 0 || index > lst->Length() - 1) throw std::invalid_argument("Given index is not within the bounds of the linked list.");
+    if (index == 0) return lst->GetFront();
+    if (index == lst->Length() - 1) return lst->GetBack();
+
+    return GetLinearTime(lst, index);
 }
 
 template<class T>
@@ -131,18 +131,12 @@ void SinglyLinkedList<T>::InsertAt(T value, int index) {
 
 template<class T>
 T SinglyLinkedList<T>::GetValueAt(int index) {
-    T value = GetConstantTimeIfIndexAllows(this, index);
-    if (value) return value;
-
-    return GetLinearTime(this, index);
+    return GetConstantTimeIfIndexAllows(this, index);
 }
 
 template<class T>
 T SinglyLinkedList<T>::GetValueAtFromEnd(int index) {
-    T value = GetConstantTimeIfIndexAllows(this, length - index - 1);
-    if (value) return value;
-
-    return GetLinearTime(this, length - index - 1);
+    return GetConstantTimeIfIndexAllows(this, length - index - 1);
 }
 
 template<class T>
