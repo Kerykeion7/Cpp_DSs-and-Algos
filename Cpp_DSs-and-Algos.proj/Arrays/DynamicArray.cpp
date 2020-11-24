@@ -44,13 +44,13 @@ bool DynamicArray<T>::IsEmpty() {
 
 template <class T>
 T DynamicArray<T>::GetAt(int index) {
-    ExitIfIndexOutOfBounds(index, Count);
+    ExitIfIndexOutOfBounds(index);
     return *(items + index);
 }
 
 template <class T>
 void DynamicArray<T>::InsertAt(T item, int index) {
-    ExitIfIndexOutOfBounds(index, Count);
+    ExitIfIndexOutOfBounds(index);
     Resize();
     T* newItems = new T[_capacity];
     int oldIndex = 0;
@@ -76,8 +76,8 @@ void DynamicArray<T>::Prepend(T item) {
 
 template <class T>
 void DynamicArray<T>::RemoveAt(int index) {
-    ExitIfArrayIsEmpty(IsEmpty());
-    ExitIfIndexOutOfBounds(index, Count);
+    ExitIfArrayIsEmpty();
+    ExitIfIndexOutOfBounds(index);
     Resize();
     T* newItems = new T[_capacity];
     int oldIndex = 0;
@@ -105,7 +105,7 @@ int DynamicArray<T>::IndexOf(T item) {
 
 template <class T>
 void DynamicArray<T>::Remove(T item) {
-    ExitIfArrayIsEmpty(IsEmpty());
+    ExitIfArrayIsEmpty();
     Resize();
     T* newItems = new T[_capacity];
     int oldIndex = 0;
@@ -133,7 +133,7 @@ void DynamicArray<T>::Push(T item) {
 
 template <class T>
 T DynamicArray<T>::Pop() {
-    ExitIfArrayIsEmpty(IsEmpty());
+    ExitIfArrayIsEmpty();
 
     T poppedItem = *(items + Count - 1);
     *(items + Count - 1) = {};
@@ -202,4 +202,22 @@ void DynamicArray<T>::AllocateNewCapacity(int newCapacity) {
     }
     delete items;
     items = newItems;
+}
+
+template<class T>
+bool DynamicArray<T>::Contains(T item) {
+    for (int i = 0; i < Count; i++)
+    {
+        if (*(items + i) == item) return true;
+    }
+    return false;
+}
+
+template<class T>
+void DynamicArray<T>::CopyTo(T arr[]) 
+{
+    for (int i = 0; i < Count; i++)
+    {
+        arr[i] = *(items + i);
+    }
 }

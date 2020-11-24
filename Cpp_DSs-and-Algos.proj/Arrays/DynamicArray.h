@@ -23,11 +23,13 @@ public:
     int Length();
     int Capacity();
     bool IsEmpty();
+    bool Contains(T item);
     T GetAt(int index);
     void InsertAt(T item, int index);
     void Prepend(T item);
     void RemoveAt(int index);
     void Remove(T item);
+    void CopyTo(T arr[]);
     int IndexOf(T item);
     void Clear();
 };
