@@ -4,8 +4,11 @@ class HashTableNode {
 public:
     K Key;
     V Value;
+    bool isAssigned = false;
 
-    HashTableNode<K, V>(K key, V value) {
+    HashTableNode() {};
+
+    HashTableNode(K key, V value) {
         Key = key;
         Value = value;
     }
