@@ -34,7 +34,7 @@ void LinkedListQueue<T>::Enqueue(T value) {
 
 template<class T>
 T LinkedListQueue<T>::Dequeue() {
-    exitIfIsEmpty(IsEmpty());
+    ExitIfEmpty();
 
     SinglyLinkedNode<T>* oldHead = Head;
     T oldVal = oldHead->value;
